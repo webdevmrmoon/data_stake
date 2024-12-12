@@ -3432,28 +3432,37 @@ p {
     font-size: 26px;
 }
 .collaboration  {
-    background: linear-gradient(90deg, #380404, #FF222B 75%);
+    background: linear-gradient(to right, #380404, #FF222B 75%);
     background-size: cover;
     background-position: center;
     padding: 80px 0px;
     position: relative;
-    /* -webkit-animation: backgroundAnimationOne 6s linear infinite ; */
+    background-size: 150% 100%;
+    background-position: 60% 50%;
+    animation: smoothPosition 6s infinite alternate ease-in-out;
 }
-@keyframes backgroundAnimationOne {
+/* .collaborationbg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #380404, #FF222B 75%);
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+     -webkit-animation: backgroundAnimationOne 6s linear infinite ;
+} */
+@keyframes smoothPosition {
     0% {
-        background: linear-gradient(90deg, #380404, #FF222B 75%);
-    }
-    20% {
-        background: linear-gradient(270deg, #380404, #FF222B 75%);
+        background-position: 0% 50%; /* Left aligned */
     }
     50% {
-        background: linear-gradient(270deg, #380404, #FF222B 75%);
-    }
-    70% {
-        background: linear-gradient(90deg, #380404, #FF222B 75%);
+        background-position: 100% 50%; /* Right aligned */
     }
     100% {
-        background: linear-gradient(90deg, #380404, #FF222B 75%);
+        background-position: 0% 50%; /* Back to left */
     }
 }
 .collaboration::after {
@@ -3524,18 +3533,29 @@ p {
     position: absolute;
     transform: rotate(360deg);
     top: -10px;
-    animation: leftfadeOut 10s ease-in-out infinite alternate-reverse both;
+    animation: leftfadeOut 6s ease-in-out infinite;
     left: 0px;
 }
 @keyframes leftfadeOut {
     0% {
         left: 0px;
+        opacity: 1;
+    }
+    20% {
+        left: 200px;
+        opacity: 0;
     }
     50% {
-        left: 100px;
+        left: 200px;
+        opacity: 0;
+    }
+    70% {
+        left: 0px;
+        opacity: 1;
     }
     100% {
-        opacity: 0;
+        left: 0px;
+        opacity: 1;
     }
 }
 
@@ -8777,14 +8797,6 @@ body.dark .hamburger .line {
 
 
 @media screen and (max-width:1240px) and (min-width:1000px) {
-    .footerContents ul li a {
-        width: 40px;
-        height: 40px;
-    }
-    .footerContents ul li a i {
-        font-size: 12px;
-        line-height: 42px;
-    }
     .ftr-link-bx a.title-16::before {
         left: 60px;
     }
@@ -8832,10 +8844,6 @@ body.dark .hamburger .line {
         line-height: 38px;
         color: #263844;
     }
-    .headerMenu>li {
-        padding: 12px 6px;
-        margin-right: 5px;
-    }
     .bannerContentWrapper {
         min-height: 70vh;
     }
@@ -8880,10 +8888,11 @@ body.dark .hamburger .line {
         font-size: 13px;
     }
     .bannerContent h2 {
-        padding-top: 30px;
+        padding-top: 0px;
         font-weight: 600;
-        line-height: 46px;
-        margin-bottom: 8px;
+        line-height: 50px;
+        margin-bottom: 0px;
+        font-size: 42px;
     }
     .bannerContent h5 {
         font-size: 20px;
@@ -8892,7 +8901,7 @@ body.dark .hamburger .line {
         gap: 20px;
     }
     .logoSection img {
-        width: 115px;
+        width: 200px;
     }
     .headerMenu>li>a {
         font-size: 14px;
@@ -8907,10 +8916,49 @@ body.dark .hamburger .line {
         width: 100px;
     }
     .headerRightMenu .defaultBtn a, .headerRightMenu .defaultBtn button {
-        height: 40px;
-        width: 120px;
+        height: 43px;
+        width: 150px;
         font-size: 13px;
         line-height: 19px;
+    }
+    .topmenuWrappers .nav-tabs {
+        gap: 10px;
+    }
+    .whyChooseCard {
+        min-height: 368px;
+    }
+    .whychoosebottomLine h4 {
+        font-size: 23px;
+    }
+    .titleSection h2 {
+        font-size: 26px;
+    }
+    .titleSection h4 {
+        font-size: 14px;
+    }
+    .ourStrength .aboutSide h2 {
+        font-size: 22px;
+    }
+    .whatsNewTitle h4 {
+        line-height: 28px;
+        font-size: 18px;
+    }
+    .countersWrap {
+        padding: 20px;
+    }
+    .common-box {
+        padding: 0px 16px;
+    }
+    .counter-text {
+        font-size: 13px;
+    }
+    .counter-num span {
+        font-size: 28px;
+    }
+    .topmenuWrappers .nav-tabs .nav-link {
+        font-size: 14px;
+        padding: 5px 30px;
+        height: 35px;
     }
     .defaultBtn {
         height: 40px;
@@ -8918,10 +8966,6 @@ body.dark .hamburger .line {
     .bannerLeftContent h2 {
         font-size: 28px;
         line-height: 40px;
-    }
-
-    .headerMenu>li {
-        padding: 22px 0px;
     }
 
     .bannerLeftContent h5 {
@@ -8947,14 +8991,6 @@ body.dark .hamburger .line {
     .bannerSection.inner .bannerContent h2 {
         font-size: 20px;
         line-height: normal;
-    }
-    .footerContents ul li a {
-        width: 40px;
-        height: 40px;
-    }
-    .footerContents ul li a i {
-        font-size: 12px;
-        line-height: 42px;
     }
     .ftr-link-bx a.title-16::before {
         left: 60px;
@@ -9007,8 +9043,9 @@ body.dark .hamburger .line {
     }
     .aboutSide p {
         margin-bottom: 0px;
-        line-height: 25px;
-        text-align: justify;
+        line-height: 19px;
+        text-align: left;
+        font-size: 13px;
     }
     .aboutSide h2 {
         font-size: 22px;
@@ -9021,11 +9058,93 @@ body.dark .hamburger .line {
         margin-right: 5px;
     }
     .bannerContentWrapper {
-        min-height: 57vh;
+        min-height: 81vh;
+        padding: 0px;
     }
     .moon svg {
         width: 18px;
         height: 18px;
+    }
+    .pb-50 {
+        padding-bottom: 30px;
+    }
+    
+    .pt-50 {
+        padding-top: 30px;
+    }
+    .titleSection {
+        width: 81%;
+    }
+    .topmenuWrappers .nav-tabs .nav-link {
+        font-size: 11px;
+        padding: 6px 18px;
+        height: 35px;
+    }
+    .whyChooseCard {
+        min-height: 278px;
+    }
+    .whychoosebottomLine h4 {
+        font-size: 18px;
+    }
+    .topmenuWrappers .nav-tabs {
+        gap: 10px;
+    }
+    .common-box {
+        padding: 0px 6px;
+    }
+    .counter-num span {
+        font-size: 22px;
+    }
+    .counter-text {
+        font-size: 11px;
+    }
+    .countersWrap {
+        padding: 10px;
+    }
+    .whychoosebottomLine {
+        margin-top: 11px !important;
+        margin-bottom: 40px;
+    }
+    .ourStrength {
+        margin-top: -120px;
+    }
+    .titleSection h2 {
+        font-size: 25px;
+    }
+    .titleSection h4 {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .ourStrength .aboutSide h2 {
+        text-align: left;
+        font-size: 18px;
+    }
+    .ourvalueContent h4 {
+        font-size: 15px;
+    }
+    .ourvaluestile {
+        padding: 16px;
+        width: 100%;
+    }
+    .ourvalueBack {
+        padding: 16px;
+    }
+    .whatsNewTitle h4 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .collabContent .titleSection h2 {
+        font-size: 17px;
+        line-height: 28px;
+    }
+    .footer-links-wrp .col-md-2 {
+        width: 32%;
+    }
+    .footer-links-wrp .col-md-4 {
+        width: 50%;
+    }
+    .ftr-link-bx a.title-16 {
+        font-size: 17px;
     }
     .sun svg {
         position: absolute;
@@ -9073,10 +9192,16 @@ body.dark .hamburger .line {
         font-size: 17px;
     }
     .headerMenu {
-        gap: 8px;
+        gap: 0px;
+    }
+    .headerSection.scroll-down .headerMenu {
+        gap: 5px;
+    }
+    .headerSection.scroll-up .headerMenu {
+        gap: 5px;
     }
     .logoSection img {
-        width: 95px;
+        width: 180px;
     }
     .headerMenu>li>a {
         font-size: 14px;
@@ -9098,10 +9223,16 @@ body.dark .hamburger .line {
     }
     .headerRightMenu .defaultBtn a, .headerRightMenu .defaultBtn button {
         height: 35px;
-        width: 119px;
+        width: 130px;
         font-size: 12px;
         line-height: 16px;
         border-radius: 12px;
+        padding: 10px 18px;
+    }
+    .pbannrbox {
+        font-size: 12px;
+        padding: 9px 15px;
+        line-height: 22px;
     }
     .defaultBtn {
         height: 35px;
@@ -9109,10 +9240,6 @@ body.dark .hamburger .line {
     .bannerLeftContent h2 {
         font-size: 28px;
         line-height: 40px;
-    }
-
-    .headerMenu>li {
-        padding: 22px 0px;
     }
 
     .bannerLeftContent h5 {
@@ -9134,11 +9261,6 @@ body.dark .hamburger .line {
     .headerMenu>li>a {
         font-size: 12px;
     }
-
-    .headerMenu>li {
-        padding: 22px 8px;
-    }
-
     .headerSubMenu>li a {
         font-size: 12px;
         padding: 5px 12px;
@@ -9226,10 +9348,6 @@ body.dark .hamburger .line {
         font-size: 12px;
     }
 
-    .headerMenu>li {
-        padding: 22px 8px;
-    }
-
     .headerSubMenu>li a {
         font-size: 12px;
         padding: 5px 12px;
@@ -9267,11 +9385,7 @@ body.dark .hamburger .line {
     }
 
     .bannerContent {
-        height: 236px;
-    }
-
-    .bannerCarousel {
-        height: 236px;
+        height: auto;
     }
 
     .forresponsive.aboutSideWrapper {
@@ -9997,7 +10111,7 @@ body.dark .hamburger .line {
         width: 100%;
         height: 100vh;
         left: 0px;
-        padding-top: 130px;
+        padding-top: 59px;
     }
     .headerSubNav {
         background: transparent;
@@ -10005,12 +10119,35 @@ body.dark .hamburger .line {
     .headerMenu {
         flex-direction: column;
     }
-
+    .submenuImg {
+        display: none;
+    }
+    .headerSubNav.withImg .headerSubMenu {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .headerSubNav .headerSubMenu {
+        max-height: inherit;
+        overflow-y: auto;
+    }
+    .headerSubNav.withImg .headerSubMenu {
+        padding: 0px;
+    }
     .headerSubNav {
         display: none;
         width: 100%;
         position: relative;
 
+    }
+    .headerSubNav.withImg {
+        display: none;
+    width: auto;
+    }
+    .headerMenu>li.hasSub::after {
+        position: absolute;
+        right: 8px;
+        top: 10px;
     }
 
     .headerSubNav {
@@ -10089,12 +10226,11 @@ body.dark .hamburger .line {
     }
 
     .headerMenu>li a:hover {
-        color: #11ffef;
-        ;
+        color: #ec1f27;
     }
 
     .hasSub.active>a {
-        color: #11ffef;
+        color: #ec1f27;
     }
 }
 
@@ -10164,7 +10300,6 @@ body.dark .hamburger .line {
     }
 
     .footer-btm-wrp p {
-        color: #ffff;
         margin-bottom: 0px;
         font-size: 12px;
         line-height: 19px;
@@ -10174,6 +10309,10 @@ body.dark .hamburger .line {
 
     .topHeadContact {
         justify-content: flex-end;
+    }
+    .footerContents ul {
+        gap: 12px;
+        justify-content: center;
     }
 }
 
@@ -10384,11 +10523,6 @@ body.dark .hamburger .line {
     .headerMenu>li>a {
         font-size: 12px;
     }
-    .headerMenu>li {
-        padding: 32px 0px;
-        margin-right: 5px;
-    }
-
     .inrbnr.certiMainPage {
         background-size: 100%;
     }
@@ -10812,7 +10946,7 @@ body.dark .hamburger .line {
         flex-direction: column-reverse;
     }
     .logoSection img {
-        width: 100px;
+        width: 150px;
     }
     .clientCard {
         width: auto;
@@ -10876,7 +11010,15 @@ body.dark .hamburger .line {
         align-items: center;
         
     }
-   
+    .topmenuWrappers .nav-tabs {
+        gap: 10px;
+    }
+    .topmenuWrappers .nav-tabs .nav-link{
+        padding: 6px 30px;
+        height: 39px;
+        font-size: 13px;
+        width: 100%;
+    }
     .ourvaluestile {
         margin-bottom: 20px;
     }
@@ -10885,6 +11027,14 @@ body.dark .hamburger .line {
     }
     .ourAchievementsWrap {
         margin-right: 0px;
+    }
+
+    .whyChooseCard {
+        padding: 20px;
+        min-height: auto;
+    }
+    .counterSection {
+        margin-top: 0px;
     }
     .bnrvideoPlayer .pulse i {
         width: 70px;
@@ -10895,6 +11045,7 @@ body.dark .hamburger .line {
         min-height: auto;
         display: flex;
         align-items: center;
+        padding: 0px;
     }
     .bannerContent p {
         text-align: center;
@@ -10932,7 +11083,7 @@ body.dark .hamburger .line {
     }
     .collabContent {
         width: 100%;
-        padding: 30px;
+        padding: 20px;
         height: 100%;
         text-align: center;
     }
@@ -10961,6 +11112,7 @@ body.dark .hamburger .line {
     .headerSection {
         position: absolute;
         z-index: 555;
+        padding: 12px 0px;
     }
     .titleSection {
         width: 100%;
@@ -10978,13 +11130,103 @@ body.dark .hamburger .line {
         align-items: normal;
         flex-direction: column;
     }
+    .coutnersContainer {
+        position: relative;
+    }
+    .whychoosebottomLine h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+    .services {
+        padding-bottom: 0px!important;
+    }
+    .common-box {
+        padding: 0px;
+    }
+    .countersWrap {
+        padding: 0px;
+    }
+    .ourStrength {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .counter-num span {
+        font-size: 21px;
+    }
+    .ourStrength .aboutSide h2 {
+        font-size: 18px;
+    }
+    .ourStrengthWrapper .whyChooseCard .col-reverse  {
+        margin-left: 0px;
+        margin-right: 0px;
+        
+    }
+    .ourStrengthWrapper .whyChooseCard .col-reverse .aboutSideContentsWrapper {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .aboutSideContentsWrapper {
+        margin-top: 20px;
+    }
+    .aboutSide p {
+        margin-bottom: 10px;
+        line-height: 21px;
+        text-align: center;
+        font-size: 12px;
+    }
+    .testimonialCard {
+        flex-direction: column;
+    }
+    .testiimg {
+        width: 100%;
+    }
+    .testiContent {
+        width: 100%;
+        padding: 10px;
+    }
+    .whatsNewTitle h4 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #332828;
+    }
+    .collabContent .titleSection h2 {
+        font-size: 16px;
+    }
+    .collabContent .titleSection {
+        position: relative;
+        z-index: 4;
+    }
+    .defaultBtn.onlightbtn a, .defaultBtn.onlightbtn b button {
+        background: #fff;
+        color: #dc3224;
+        font-size: 10px;
+        padding: 8px 10px;
+        height: 39px;
+    }
+    .footer-wrp-main {
+        padding-top: 50px;
+    }
+    .footer-logo-wrp {
+        margin-bottom: 0px;
+    }
+    .copyrightContent {
+        gap: 0px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 
 
 @media screen and (max-width:480px) {
+  
     /* .aboutParagraph .normalList li {
         text-align: left;
     } */
+    .countersWraper .col-md-3 {
+        width: 100%;
+    } 
     .masPartCard {
         flex-direction: column;
     }
@@ -10998,11 +11240,14 @@ body.dark .hamburger .line {
         text-align: center;
     }
     .bannerContent h2 {
-        font-size: 70px;
+        font-size: 22px;
         font-weight: 600;
-        line-height: 71px;
+        line-height: 32px;
         margin-bottom: 0px;
         text-align: center;
+    }
+    .bannerContent h3 {
+        font-size: 40px;
     }
     .bannerAction {
         flex-direction: column;
@@ -11033,7 +11278,7 @@ body.dark .hamburger .line {
         /* box-shadow: 0px 0px 10px #ddd; */
     }
     .testimonialCard {
-        padding: 20px;
+        padding: 0px;
     }
     .footer-logo-wrp img {
         width: 57%;
@@ -11070,6 +11315,14 @@ body.dark .hamburger .line {
     }
     .titleSection h2 {
         font-size: 19px;
+        line-height: normal;
+    }
+    .pb-50 {
+        padding-bottom: 20px;
+    }
+    
+    .pt-50 {
+        padding-top: 20px;
     }
     /* .titleSection h2::after {
         width: 40px;
