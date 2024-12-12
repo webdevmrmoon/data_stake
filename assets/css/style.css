@@ -2771,6 +2771,45 @@ p {
     border-bottom-right-radius: 30px;
     border: 1px solid #FFF9D4;
 }
+.ourvalueBack {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 98%;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding: 29px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: 0.3s ease-in-out;
+}
+.ourvaluestile:hover .ourvalueBack {
+    transform: scaleX(1);
+}
+.ourvbackHeader {
+    display: flex;
+    align-items: center;
+    
+}
+.ourvbackHeader img {
+    width: 37px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #dddddd63;
+    border-radius: 100%;
+    height: 37px;
+}
+.ourvbackHeader h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.ourvbackContent p {
+    font-size: 13px;
+}
 .ourvaluestile::before {
     content: '';
     position: absolute;
@@ -2808,10 +2847,14 @@ p {
     border: 1px solid #d6f5d7;
 }
 .ourvaluesIcon {
-    width: 33px;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    height: 100px;
+    padding: 31px;
+    box-shadow: 0px 3px 10px #dddddd7a;
+    border-radius: 100%;
 }
 .ourvaluesIcon img{
     width: 100%;
@@ -3518,7 +3561,7 @@ p {
     margin-bottom: 0px;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
-    box-shadow: 0px 6px 16px #dddddd7d;
+    /* box-shadow: 0px 6px 16px #dddddd7d; */
 }
 .whyChooseHeader img.whyIcon {
     position: absolute;
@@ -3826,7 +3869,7 @@ p {
 .testimonials {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #fff2f082, #ffffff);
+    /* background: linear-gradient(180deg, #fff2f082, #ffffff); */
 }
 .testimonials-bg {
     width: 100%;
@@ -8435,7 +8478,9 @@ margin-bottom: 10px;
 }
 
 .ourStrength {
-    margin-top: -100px;
+    margin-top: -170px;
+    background: #fcfeff;
+    padding-top: 60px;
 }
 .ourStrength .whyChooseCard {
     background: transparent;
@@ -8483,6 +8528,9 @@ margin-bottom: 10px;
     width: 140%;
     height: 140%;
     object-fit: cover;
+}
+.ourStrengthWrapper {
+    margin-top: 30px;
 }
 .ourStrengthWrapper .whyChooseCard .col-reverse {
 
