@@ -475,28 +475,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const bodyElement = document.body;
     const progressBar = document.getElementById("progress-bar");
     const pathLength = document
-      .querySelector("#progress-bar > svg > path")
-      .getTotalLength();
-  
+        .querySelector("#progress-bar > svg > path")
+        .getTotalLength();
+
     scrollToTopBtn.addEventListener("click", () => {
-      rootElement.scrollTo({ top: 0, behavior: "smooth" });
+        rootElement.scrollTo({ top: 0, behavior: "smooth" });
     });
-  
+
     document.addEventListener("scroll", () => {
-      const scrollAmount = pathLength / 100;
-      const scrollPosition = Math.round(
-        ((rootElement.scrollTop || bodyElement.scrollTop) /
-          ((rootElement.scrollHeight || bodyElement.scrollHeight) -
-            innerHeight)) *
-          100 *
-          scrollAmount
-      );
-  
-      if (scrollPosition > 5) {
-        scrollToTopBtn.classList.add("showBtn");
-        progressBar.style.setProperty("--scrollAmount", scrollPosition + "px");
-      } else {
-        scrollToTopBtn.classList.remove("showBtn");
-      }
+        const scrollAmount = pathLength / 100;
+        const scrollPosition = Math.round(
+            ((rootElement.scrollTop || bodyElement.scrollTop) /
+                ((rootElement.scrollHeight || bodyElement.scrollHeight) -
+                    innerHeight)) *
+            100 *
+            scrollAmount
+        );
+
+        if (scrollPosition > 5) {
+            scrollToTopBtn.classList.add("showBtn");
+            progressBar.style.setProperty("--scrollAmount", scrollPosition + "px");
+        } else {
+            scrollToTopBtn.classList.remove("showBtn");
+        }
     });
-  });
+});
+
+
+
+// Vision Mission Tabbing
+
+$(function(){
+    var section = $('div.table__cell');
+
+function toggleAccordion() {
+  section.removeClass('active');
+  $(this).addClass('active');
+}
+
+section.on('click', toggleAccordion);
+})
+
