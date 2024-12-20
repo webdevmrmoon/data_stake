@@ -516,3 +516,21 @@ function toggleAccordion() {
 section.on('click', toggleAccordion);
 })
 
+
+
+// image change in responsive
+$(document).ready(function() {
+    function checkWidth() {
+        if ($(window).width() <= 768) {
+            $('.bannerBg img').attr('src', 'assets/img/bg/service-mob-img1.png');
+        } else {
+            $('.bannerBg img').attr('src', 'assets/img/bg/services-bg1.png');
+        }
+    }
+
+    checkWidth(); // Initial check
+
+    $(window).resize(function() {
+        checkWidth(); // Check on window resize
+    });
+});
