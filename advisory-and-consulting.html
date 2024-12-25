@@ -178,7 +178,13 @@
   
     <!-- Banner Section -->
     <section class="bannerSection servicesbanner sectionscroll wow animate__fadeIn" data-wow-delay="0.1s">
-        <div class="bannerBg"><img src="assets/img/bg/services-bg1.png" alt="img"></div>
+        <div class="bannerBg"><img src="assets/img/bg/services-main-bg.jpg" alt="img">
+            <div class="circleshapone"></div>
+            <div class="circleshaptwo"></div>
+            <div class="circleshapthree"></div>
+            <!-- <div class="circleshapfour"></div> -->
+            <div class="mainimg"><img src="assets/img/bg/service-img1.png" alt=""></div>
+        </div>
         <div class="bannerWrap">
             <div class="site-width">
                 <div class="row align-item-center">
@@ -489,8 +495,8 @@
                                     Explore how DataSkate’s Consulting and Advisory services can elevate your integration strategies
                                 </h2>
                                 <div class="wow animate__fadeInUp defaultBtn onlightbtn mt-4">
-                                    <a href="javascript:void(0)" class="">
-                                        <span class="headerCareer">Schedule your FREE consultation </span>
+                                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quickEnquiry" class="">
+                                        <span class="headerCareer">Schedule Your Free Consultation  </span>
                                     </a>
                                 </div>
                             </div>
@@ -654,21 +660,21 @@
     <!-- <a href="https://wa.me/+15148153288" id="whatsapp" class="fab fa-whatsapp text-theme-colored font-36 mt-5 sm-display-block" style="padding-top: 7px; color:#ffffff!important;" rel="nofollow" target="_blank"></a> -->
 
 
-    <!-- onload form Modal -->
+   <!-- onload form Modal -->
     <div class="modal fade homeQuickEnquiry" id="quickEnquiry" tabindex="-1" aria-labelledby="quickEnquiryLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body">
                     <div class="hctFromContainer formModal">
                         <div class="hctf">
                             <div class="hctfTitle">
-                                <h4>
-                                    Get a Quick Quote,
+                                <h4 class="mb-2">
+                                    Let’s take the first step together
                                 </h4>
                                 <p>
-                                    Fill out the form below and pave your way to success, completely hassle-free!
+                                    Explore how DataSkate’s Consulting and Advisory services can elevate your integration strategies.
                                 </p>
                             </div>
                             <div class="formWrapper">
@@ -678,41 +684,78 @@
                                             <div class="col-md-6">
                                                 <label class="form-group">
                                                     <span>First Name </span><span style="color: red;">*</span>
-                                                    <input type="text" class="form-control" name="name"
-                                                        onkeypress="return /[a-z-/ /]/i.test(event.key)" required=""
-                                                        placeholder="Name">
-
+                                                    <input type="text" class="form-control" name="name" placeholder="Name">
+    
                                                 </label>
                                             </div>
                                             <div class="col-md-6">
                                                 <label class="form-group">
                                                     <span>Last Name </span><span style="color: red;">*</span>
-                                                    <input type="text" class="form-control" name="name"
-                                                        onkeypress="return /[a-z-/ /]/i.test(event.key)" required=""
-                                                        placeholder="Name">
-
+                                                    <input type="text" class="form-control" name="name" placeholder="Name">
+    
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-group">
+                                                    <span>Company </span><span style="color: red;">*</span>
+                                                    <input type="text" class="form-control" name="Company"
+                                                        placeholder="Company">
+    
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-group">
+                                                    <span>Designation </span>
+                                                    <input type="text" class="form-control" name="Designation"
+                                                        placeholder="Designation">
+    
                                                 </label>
                                             </div>
                                             <div class="col-md-12">
                                                 <label class="form-group">
-                                                    <span for="">Email ID</span> <span style="color: red;">*</span>
+                                                    <span for="">Work Email</span> <span style="color: red;">*</span>
                                                     <input type="email" class="form-control" name="email" required=""
                                                         placeholder="Mail">
-
+    
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-group">
+                                                    <span for="">Pick a suitable day for the call</span> <span
+                                                        style="color: red;">*</span>
+                                                    <input type="date" class="form-control" name="date" required=""
+                                                        placeholder="Mail">
+    
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-group">
+                                                    <span for="">Pick a time slot</span> <span style="color: red;">*</span>
+                                                    <input type="time" class="form-control" name="date" required=""
+                                                        placeholder="Mail">
+    
                                                 </label>
                                             </div>
                                             <div class="col-md-12">
+                                                <label class="form-group">
+                                                    <span for="">Contact Number</span> <span style="color: red;">*</span>
+                                                    <input type="number" class="form-control" name="number" required=""
+                                                        placeholder="Contact Number">
+    
+                                                </label>
+                                            </div>
+                                            <!-- <div class="col-md-12">
                                                 <label class="form-group">
                                                     <span for="">Message</span> <span style="color: red;">*</span>
                                                     <textarea type="text" id="description" placeholder=""
                                                         class="form-control"></textarea>
-
+    
                                                 </label>
-                                            </div>
-
+                                            </div> -->
+    
                                             <div class="col-md-12">
                                                 <label for=""></label>
-
+    
                                                 <div style="text-align: center;">
                                                     <div class="formSubmitBtn ">
                                                         <button type="submit" class="btn1">
@@ -722,7 +765,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+    
                                     </form>
                                 </div>
                             </div>
