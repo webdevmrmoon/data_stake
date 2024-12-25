@@ -704,7 +704,7 @@ p {
     padding: 40px 0px;
 }
 .servicesbanner .bannerContentWrapper {
-    padding: 60px 0px;
+   padding: 102px 0px;
 }
 .aboutBanner .bannerContentWrapper {
     padding: 90px 0px;
@@ -1110,7 +1110,7 @@ p {
 }
 
 .headerMenu>li>a {
-    padding: 26px 0px;
+    padding: 30px 0px;
     position: relative;
     /* color: #fff; */
     display: inline-block;
@@ -1380,8 +1380,77 @@ p {
 
 }
 .bannerSection.servicesbanner {
-    padding-top: 76px;
-    min-height: 510px;
+    padding-top: 83px;
+    min-height: 580px;
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.circleshapone {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(270deg, #FF870300, #FF2B2B);
+    bottom: -120px;
+    left: 130px;
+}
+
+.circleshaptwo {
+    position: absolute;
+    width: 152px;
+    height: 152px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    background: linear-gradient(148deg, #25252500, #FF222B4D);
+    border-radius: 100%;
+}
+.circleshapthree {
+    width: 326px;
+    height: 326px;
+    position: absolute;
+    right: -180px;
+    top: 80px;
+    background: linear-gradient(0deg, #FF870300, #ff522b);
+    border-radius: 100%;
+    z-index: 1;
+}
+.circleshapfour {
+    position: absolute;
+    width: 50%;
+    height: 17%;
+    background: #ffffff42;
+    bottom: 6%;
+    border-radius: 100%;
+    right: 1%;
+}
+.bannerSection.servicesbanner .mainimg {
+    position: absolute;
+    right: 3%;
+    bottom: 0px;
+    top: 81px;
+    width: 49%;
+    margin: auto;
+    height: fit-content;
+    z-index: 3;
+}
+@media screen and (max-width:2200px) and (min-width:1700px) {
+    .bannerSection.servicesbanner .mainimg  {
+        width: 41%;
+    }
+}
+@media screen and (max-width:1699px) and (min-width:1400px) {
+    .bannerSection.servicesbanner .mainimg  {
+        width: 46%;
+    }
+}
+.bannerSection.servicesbanner .mainimg img {
+    width: 100%;
+    object-fit: contain;
+    height: fit-content;
 }
 #canvasParticles {
     position: absolute;
@@ -1763,12 +1832,13 @@ p {
     color: #828282;
 }
 .vtabbingbtns {
-    width: 106px;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     background: #000000;
     transition: 0.4s ease-in-out;
+    cursor: pointer;
 }
 .visionMissionWrapper .table__cell.active .vtabbingbtns {
     background: transparent;
@@ -1793,6 +1863,28 @@ p {
     margin-left: 0px;
     padding-right: 70px;
 }
+
+.animationsvgcircle {
+    animation: pulsecircle 2s infinite ease-out;
+}
+
+@keyframes pulsecircle {
+    0% {
+        /* transform: scale(0); */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        /* transform: scale(1); */
+        opacity: 0;
+    }
+}
+/* svg {
+    display: block;
+    margin: 50px auto;
+} */
 
 .rs-process.style1 .process-effects-layer {
 
@@ -4212,6 +4304,7 @@ p {
     align-items: center;
     flex-direction: column;
     padding: 40px;
+    min-height: 450px;
     background: #F5F5F5;
     border-radius: 30px
 }
@@ -4591,10 +4684,12 @@ p {
     border-radius: 30px;
     padding: 8px 13px;
     font-weight: 500;
+    font-size: 14px;
 }
 .formWrapper .form-control::placeholder {
     color: #a8a8a8;
     font-weight: 500;
+    font-size: 14px;
 }
 .formWrapper .form-control.form-select:focus {
     box-shadow: none;
@@ -4623,6 +4718,7 @@ p {
     margin-bottom: 10px;
     font-weight: 500;
     display: inline-block;
+    font-size: 14px;
 }
 
 .hctFromContainer .form-group input:focus {
@@ -4656,7 +4752,7 @@ p {
 .formSubmitBtn button {
     display: block;
     width: 100%;
-    background: linear-gradient(90deg, #5f249f, #46127e);
+    background: linear-gradient(90deg, #252525, #FF222B);
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
