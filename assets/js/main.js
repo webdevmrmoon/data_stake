@@ -129,14 +129,15 @@ $(function () {
     })
 })
 $(function () {
-    $('.blogSlider').owlCarousel({
+    $('.tagsSlider').owlCarousel({
         loop: true,
         margin: 10,
-        nav: false,
+        nav: true,
         dots: false,
         autoplay: true,
         // slideTransition: 'linear',
         autoplayTimeout: 4000,
+        navText: ["<i class='fa-solid fa-chevron-left'></i>", "<i class='fa-solid fa-chevron-right'></i>"],
         autoplaySpeed: 2000,
         smartSpeed: 550,
         autoplayHoverPause: true,
@@ -151,7 +152,7 @@ $(function () {
                 items: 2
             },
             1000: {
-                items: 3
+                items: 4
             }
         }
     })
@@ -534,3 +535,47 @@ section.on('click', toggleAccordion);
 //         checkWidth(); 
 //     });
 // });
+
+
+// Pagination CSS
+window.onload = function () {
+    var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
+  
+    $('.cdp_i').on('click', function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      var go = $(this).attr('href').replace('#!', '');
+  
+      if (go === '+1') {
+        paginationPage++;
+      } else if (go === '-1') {
+        paginationPage--;
+      } else {
+        paginationPage = parseInt(go, 10);
+      }
+  
+      // Ensure pagination stays within valid bounds
+      if (paginationPage < 1) {
+        paginationPage = 1;
+      } else if (paginationPage > 19) { // Adjust to the max number of pages
+        paginationPage = 19;
+      }
+  
+      $('.cdp').attr('actpage', paginationPage);
+  
+      // Update the visual state of pagination
+      $('.cdp_i').removeClass('active'); // Remove active class from all
+      $(`.cdp_i[href='#!${paginationPage}']`).addClass('active'); // Add active class to current page
+    });
+  };
+
+//   #blog share btn
+
+$(function () {
+    $('.blogsharebtn').click(function () {
+        $('.loveArticleSocial').slideToggle(400);
+    });
+
+    $('.lovearticlsocialCloser').click(function () {
+        $('.loveArticleSocial').slideUp(400);
+    });
+});
