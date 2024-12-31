@@ -128,6 +128,7 @@ $(function () {
         }
     })
 })
+
 $(function () {
     $('.tagsSlider').owlCarousel({
         loop: true,
@@ -346,7 +347,7 @@ $(function () {
 
 // moving Image
 $(function () {
-    $('.bannerCaraousel').mousemove(function (e) {
+    $('.bannerImg').mousemove(function (e) {
         var moveinX = (e.pageX * -2 / 100);
         var moveinY = (e.pageY * -2 / 100);
         $(this).css('transform', `translate(${moveinX}px, ${moveinY}px)`);
@@ -366,7 +367,7 @@ $(function () {
 
         // Apply the transformation to the target element
         $('.aboutImg1').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
-        $('.bnrshapeone').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
+        // $('.bnrshapeone').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
         $('.bnrshapetwo').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
         $('.bnrshapethree').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
         $('.bnrshapefour').css('transform', `translate(${moveinX}px, ${moveinY}px)`);
@@ -577,5 +578,19 @@ $(function () {
 
     $('.lovearticlsocialCloser').click(function () {
         $('.loveArticleSocial').slideUp(400);
+    });
+});
+
+document.querySelectorAll('.btnHover').forEach(link => {
+    const textSpan = link.querySelector('.btnChangeText');
+    const originalText = textSpan.textContent;
+
+    link.addEventListener('mouseenter', () => {
+        const hoverText = textSpan.getAttribute('data-hover-text');
+        textSpan.textContent = hoverText;
+    });
+
+    link.addEventListener('mouseleave', () => {
+        textSpan.textContent = originalText;
     });
 });
