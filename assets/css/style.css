@@ -10437,12 +10437,18 @@ body.dark .hamburger .line {
 .newHome .ourStrength .whyChooseCard .aboutImg {
     height: auto;
     border: none;
+    width: 90%;
 }
 .newHome .ourStrength .whyChooseCard .aboutImg::before {
     display: none;
 }
 .newHome .ourStrength .whyChooseCard .aboutImg::after {
     display: none;
+}
+.newHome .ourStrength .aboutImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .newHome .ourStrengthWrapper {
