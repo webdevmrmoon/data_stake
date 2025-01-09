@@ -5,12 +5,12 @@
  * Tooltips for d3.js SVG visualizations
  */
 // eslint-disable-next-line no-extra-semi
-import { map } from 'd3-collection'
-import { selection, select } from 'd3-selection'
+const { map } = require('d3-collection');
+const { selection, select } = require('d3-selection');
 // Public - constructs a new tooltip
 //
 // Returns a tip
-export default function() {
+module.exports = function() {
   var direction   = d3TipDirection,
       offset      = d3TipOffset,
       html        = d3TipHTML,

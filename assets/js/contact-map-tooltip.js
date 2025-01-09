@@ -1,5 +1,6 @@
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 $('svg #ON').tooltip({
     title: '<h4>Toronto</h4><ul><li style="color:#fff; font-size:12px">(ON)</li></ul>',
